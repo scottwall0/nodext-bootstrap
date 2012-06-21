@@ -4,7 +4,7 @@ fs = require 'fs'
 
 less = require 'less'
 
-exports.compile = (outfile, callback, options) ->
+exports.compile = (outfile, options, callback) ->
   if options.overrideFile
     filename = path.join process.cwd(), options.overrideFile
   else
@@ -20,8 +20,9 @@ exports.compile = (outfile, callback, options) ->
   parser.parse lessData, (e, tree) ->
     callback e if e
     try
+      options.compress ?= true
       css = tree.toCSS 
-        compress: options.compress || true
+        compress: options.compress
 
       fs.writeFile outfile, css, callback
     catch error

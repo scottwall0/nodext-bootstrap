@@ -26,8 +26,8 @@ exports.compile = (outfile, options, callback) ->
   cat.on 'exit', (e)->
     callback e if e
 
-    compress = options.compress || true
-    jsOut = minify jsOut if compress
+    options.compress ?= true
+    jsOut = minify jsOut if options.compress
     fs.writeFile outfile, jsOut, callback
 
 
