@@ -2,7 +2,7 @@
   "author": "Cameron Bytheway <bytheway.cameron@gmail.com>",
   "name": "nodext-bootstrap",
   "description": "Twitter Bootstrap extension for nodext",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/brunojs/nodext-bootstrap.git"
