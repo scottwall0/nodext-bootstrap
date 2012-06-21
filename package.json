@@ -9,9 +9,9 @@
   },
   "main": "main.coffee",
   "dependencies": {
-    "nodext": "",
-    "express": "",
-    "bootstrap": "2.0.4",
+    "nodext": ">=0.1.0",
+    "express": ">=2.5.10",
+    "bootstrap": "https://github.com/twitter/bootstrap/tarball/v2.0.4",
     "less": ">=1.3.0",
     "uglify-js": ">=1.3.1"
   },
